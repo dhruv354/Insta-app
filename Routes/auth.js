@@ -14,10 +14,8 @@ const User = require("../models/user");
 const Post = require("../models/post");
 
 router.get("/", (req, res) => {
-  // console.log(req.headers);
-
-  res.send("hello world");
-});
+  return res.redirect("/signin")
+})
 
 //protected route for testing purpose
 router.get("/protected", Login, (req, res) => {
